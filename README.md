@@ -1,7 +1,5 @@
 # *Tecknocrafters-Nasa-Space-App-Challenger-2025*
 
-
-
 <!-- <p align="center">
   <video src="Assets/Ilustration-challenge.png" width=400">
 <p/> -->
@@ -32,6 +30,12 @@ de observación terrestre para predecir cielos más limpios y seguros mediante c
   - Proyecto Pandora (168 sites).
   - Red TOLNet (12 sites).
   - AirNow y OpenAQ.
+
+## **Datos meteorológicos:**
+  - **Fuente:** OpenWeatherMap API, NOAA, WeatherKit, Meteostat.
+  - **Datasets:** NASA Worldview, GOES, and Himawari Imagery, MERRA-2 Reanalysis Data, TEMPO Satellite Data.
+  - **Variables:** Temperatura, humedad, viento, presión, precipitación.
+
 
 # *Acerca del equipo:*
 Somos un equipo de desarrolladores 👩‍💻 y matemáticos 🧮: Nos dedicamos a crear valor a través de nuestras soluciones.\
