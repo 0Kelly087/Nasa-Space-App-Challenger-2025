@@ -14,7 +14,7 @@ de observación terrestre para predecir cielos más limpios y seguros mediante c
     https://www.spaceappschallenge.org/2025/challenges/from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies/?tab=resources
 
 <p align="center">
-  <img width="700" height="999" src="Assets/Tecknocrafters-Banner.png" alt="Logo-Tecknocrafters">
+  <img width="700" height="700" src="Assets/Tecknocrafters-Banner.png" alt="Logo-Tecknocrafters">
 </p>
 
 ## **Objetivo Principal:**
@@ -41,7 +41,7 @@ El sistema combina datos satelitales y terrestres con herramientas de visualizac
     https://www.spaceappschallenge.org/2025/find-a-team/teknocrafters/
   
 <p align="center">
-  <img width="650" height="300" src="Assets/Tecknocrafters-Team.jpeg" alt="Logo-Tecknocrafters">
+  <img width="750" height="500" src="Assets/Tecknocrafters-Team.jpeg" alt="Logo-Tecknocrafters">
 </p>
 
 ## *Documentación Proyecto*
