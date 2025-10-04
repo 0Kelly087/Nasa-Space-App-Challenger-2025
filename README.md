@@ -1,11 +1,43 @@
 # *Tecknocrafters-Nasa-Space-App-Challenger-2025*
 
 
-<!--
-<p align="center">
-  <video src="Assets/" width=400/>
-<p/> -->
 
+<!-- <p align="center">
+  <video src="Assets/Ilustration-challenge.png" width=400">
+<p/> -->
+  
+<p align="center">
+  <img src="" width=400" height="300">
+   <img width="900" height="300" src="Assets/Ilustration-challenge.png" alt="Logo-Tecknocrafters">
+<p/>
+
+
+# *Acerca del desafío:*
+**From EarthData to Action: Cloud Computing with Earth Observation Data for Predicting Cleaner, Safer Skies**\
+El desafío "De EarthData a la acción: Computación en la nube con datos de observación de la Tierra para predecir cielos más limpios y seguros" busca utilizar datos 
+de observación terrestre para predecir cielos más limpios y seguros mediante computación en la nube.
+
+    https://www.spaceappschallenge.org/2025/challenges/from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies/?tab=resources
+
+<p align="center">
+  <img width="900" height="300" src="Assets/Tecknocrafters-Banner.png" alt="Logo-Tecknocrafters">
+</p>
+
+## **Objetivo Principal:**
+  - Analizar datos atmosféricos para mejorar la predicción de calidad del aire.
+  - Utilizar infraestructura de computación en la nube para procesamiento escalable.
+  - Desarrollar modelos predictivos basados en datos satelitales y estaciones terrestres.
+  - Datos Disponibles.
+
+## **Satélites:**
+  - **TEMPO:** NO2, formaldehído, índice de aerosoles, ozono.
+  - **GOES y Himawari-8:** Imágenes visibles e infrarrojas.
+  - **AIRS:** Humedad relativa y temperatura superficial.
+
+## **Estaciones Terrestres:**
+  - Proyecto Pandora (168 sites).
+  - Red TOLNet (12 sites).
+  - AirNow y OpenAQ.
 
 # *Acerca del equipo:*
 Somos un equipo de desarrolladores 👩‍💻 y matemáticos 🧮: Nos dedicamos a crear valor a través de nuestras soluciones.\
@@ -15,30 +47,8 @@ El sistema combina datos satelitales y terrestres con herramientas de visualizac
     https://www.spaceappschallenge.org/2025/find-a-team/teknocrafters/
   
 <p align="center">
-  <img width="900" height="300" src="Assets/" alt="Logo-Tecknocrafters">
+  <img width="900" height="300" src="Assets/Tecknocrafters-Banner.png" alt="Logo-Tecknocrafters">
 </p>
-
-# *Acerca del desafío:*
-**From EarthData to Action: Cloud Computing with Earth Observation Data for Predicting Cleaner, Safer Skies**\
-El desafío "De EarthData a la acción: Computación en la nube con datos de observación de la Tierra para predecir cielos más limpios y seguros" busca utilizar datos 
-de observación terrestre para predecir cielos más limpios y seguros mediante computación en la nube.
-
-## **Objetivo Principal:**
-  - Analizar datos atmosféricos para mejorar la predicción de calidad del aire.\
-  - Utilizar infraestructura de computación en la nube para procesamiento escalable.\
-  - Desarrollar modelos predictivos basados en datos satelitales y estaciones terrestres.\
-  - Datos Disponibles.
-
-## **Satélites:**
-  - **TEMPO:** NO2, formaldehído, índice de aerosoles, ozono.\
-  - **GOES y Himawari-8:** Imágenes visibles e infrarrojas.
-  - **AIRS:** Humedad relativa y temperatura superficial.
-
-## **Estaciones Terrestres:**
-  - Proyecto Pandora (168 sites).\
-  - Red TOLNet (12 sites).\
-  - AirNow y OpenAQ.
-
 
 ## *Documentación Proyecto*
     https://docs.google.com/document/d/1uuhRDvQpKQE9btqwEHbOsw9dWNDeE0vpcwazzpXzLTM/edit?usp=sharing
