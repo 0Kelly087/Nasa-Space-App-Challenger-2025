@@ -5,12 +5,6 @@
 <!-- <p align="center">
   <video src="Assets/Ilustration-challenge.png" width=400">
 <p/> -->
-  
-<p align="center">
-  <img src="" width=400" height="300">
-   <img width="900" height="300" src="Assets/Ilustration-challenge.png" alt="Logo-Tecknocrafters">
-<p/>
-
 
 # *Acerca del desafío:*
 **From EarthData to Action: Cloud Computing with Earth Observation Data for Predicting Cleaner, Safer Skies**\
@@ -20,7 +14,7 @@ de observación terrestre para predecir cielos más limpios y seguros mediante c
     https://www.spaceappschallenge.org/2025/challenges/from-earthdata-to-action-cloud-computing-with-earth-observation-data-for-predicting-cleaner-safer-skies/?tab=resources
 
 <p align="center">
-  <img width="900" height="300" src="Assets/Tecknocrafters-Banner.png" alt="Logo-Tecknocrafters">
+  <img width="700" height="999" src="Assets/Tecknocrafters-Banner.png" alt="Logo-Tecknocrafters">
 </p>
 
 ## **Objetivo Principal:**
@@ -47,7 +41,7 @@ El sistema combina datos satelitales y terrestres con herramientas de visualizac
     https://www.spaceappschallenge.org/2025/find-a-team/teknocrafters/
   
 <p align="center">
-  <img width="900" height="300" src="Assets/Tecknocrafters-Banner.png" alt="Logo-Tecknocrafters">
+  <img width="650" height="300" src="Assets/Tecknocrafters-Team.jpeg" alt="Logo-Tecknocrafters">
 </p>
 
 ## *Documentación Proyecto*
