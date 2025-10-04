@@ -69,6 +69,7 @@ El sistema combina datos satelitales y terrestres con herramientas de visualizac
 └─── package.json/               # Dependencias del proyecto
 ```
 
+
 ## **Team membersTeKnoCrafters:**
 
 Copyright: © https://github.com/0Kelly087 Created by: © 0Kelly087\
