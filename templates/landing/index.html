@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Misión SPACIAL TEMPO</title>
+  <link rel="stylesheet" href="{% static 'landing/css/style.css' %}">
+</head>
+<body>
+  <div class="landing-container">
+    <img src="{% static 'landing/Imagenes/LogoLandsatSF.png' %}" alt="Logo Landsat" class="logo-landing">
+
+    <h1 class="title">
+      <span class="white-galaxy">BIENVENIDO A LA</span>
+      <span class="blue-galaxy">MISIÓN SPACIAL TEMPO</span>
+    </h1>
+
+    <p class="description">
+      Bienvenido a la Misión TEMPO: Transformamos el Monitoreo de Calidad del Aire con 
+      <b>Tecnología Espacial Avanzada</b>.  
+      Accede a datos de la calidad del aire en tiempo real y pronósticos meteorológicos con la potencia de la NASA.
+    </p>
+
+    <button id="startMission" class="btn-galaxy">Iniciar Misión</button>
+  </div>
+
+  <script src="{% static 'landing/js/script.js' %}"></script>
+</body>
+</html>
