@@ -1,7 +1,8 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('landing.urls')),  # 👈 Enlaza tu app principal
+    path('', views.index, name='index'),
+    path('filtros/', views.filtros, name='filtros'),
+    path('prediccion/', views.prediccion, name='prediccion'),
 ]
