@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     # Third party
     'rest_framework',
     
-    # Tus apps
     'apps.core',
     'apps.api',
     'apps.ia_models',
