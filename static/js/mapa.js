@@ -152,10 +152,6 @@ function mostrarInfo() {
     });
 }
 
-function continuarPrediccion() {
-  window.location.href = "predicciones.html";
-}
-
 // Asegurar que el mapa se renderice correctamente al cargar
 setTimeout(() => {
   map.invalidateSize();
@@ -165,3 +161,9 @@ setTimeout(() => {
 window.addEventListener('resize', () => {
   map.invalidateSize();
 });
+
+function continuarPrediccion() {
+  window.location.href = "/predicciones/";  // Cambiar esto
+}
+
+   
