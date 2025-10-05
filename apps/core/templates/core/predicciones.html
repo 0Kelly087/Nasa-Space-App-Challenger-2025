@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicciones - NASA Space App</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <div class="overlay"></div
+
+    <div class="container">
+        <header>
+            <h1>Predicciones Ambientales</h1>
+            <p>Simulación de hábitos y proyección futura de sostenibilidad</p>
+        </header>
+
+        <div class="content">
+
+            <!-- Sección izquierda: análisis -->
+            <div class="analisis">
+                <h2>Análisis de la Predicción</h2>
+                <p id="resultado">Ajusta los controles para generar una predicción basada en hábitos sostenibles.</p>
+            </div>
+
+            <!-- Sección derecha: controles -->
+            <div class="controles">
+
+                <!-- Barra de hábitos -->
+                <div class="control">
+                    <label for="habitos">Hábitos</label>
+                    <div class="indicadores">
+                        <span>Peores hábitos</span>
+                        <span>Hábitos excelentes</span>
+                    </div>
+                    <input type="range" id="habitos" min="0" max="100" value="0" class="slider-termico">
+                </div>
+
+                <!-- Barra de años -->
+                <div class="control">
+                    <label for="anio">Año de predicción</label>
+                    <div class="indicadores">
+                        <span>2025</span>
+                        <span>2050</span>
+                    </div>
+                    <input type="range" id="anio" min="2025" max="2050" value="2025" class="slider-anio">
+                </div>
+
+                <!-- Botón -->
+                <button id="generar">Generar Predicción</button>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const habitos = document.getElementById("habitos");
+        const anio = document.getElementById("anio");
+        const resultado = document.getElementById("resultado");
+        const boton = document.getElementById("generar");
+
+        boton.addEventListener("click", () => {
+            const valorHabitos = habitos.value;
+            const valorAnio = anio.value;
+
+            let mensaje = "";
+
+            if (valorHabitos < 30) {
+                mensaje = `Para el año ${valorAnio}, los indicadores ambientales serán críticos debido a los bajos hábitos sostenibles. 🌍`;
+            } else if (valorHabitos < 70) {
+                mensaje = `En el año ${valorAnio}, se observa una mejora moderada en la sostenibilidad, pero aún hay desafíos. 🌱`;
+            } else {
+                mensaje = `¡Excelente! Para el año ${valorAnio}, los hábitos sostenibles impulsan un ambiente saludable y equilibrado. 🌿`;
+            }
+
+            resultado.innerText = mensaje;
+        });
+          <!-- Pie de página -->
+  <footer>© 2025 Misión TEMPO - Proyecto NASA Space Apps</footer>
+    </script>
+
+</body>
+
+</html>
