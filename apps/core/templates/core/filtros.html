@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  {% load static %}
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filtros - Misión TEMPO</title>
+
+  <!-- Fuente y CSS principal -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+  <style>
+  body {
+    background: url("{% static 'images/LogoFondoPrincipal.png' %}") no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      overflow-x: hidden;
+      position: relative;
+  }
+  
+</style>
+
+</head>
+
+<body>
+  <div class="overlay"></div>
+
+  <div class="container filtros-container">
+    <h1>Centro de Filtros de la Misión TEMPO</h1>
+    <p>Selecciona una localidad de Bogotá para obtener información detallada sobre la calidad del aire y condiciones atmosféricas.</p>
+
+    <!-- Barra de Filtros -->
+    <div class="barra-filtros">
+      <select id="localidad">
+        <option value="">Seleccione una localidad</option>
+        <option value="Usaquén">Usaquén</option>
+        <option value="Chapinero">Chapinero</option>
+        <option value="Santa Fe">Santa Fe</option>
+        <option value="San Cristóbal">San Cristóbal</option>
+        <option value="Usme">Usme</option>
+        <option value="Tunjuelito">Tunjuelito</option>
+        <option value="Bosa">Bosa</option>
+        <option value="Kennedy">Kennedy</option>
+        <option value="Fontibón">Fontibón</option>
+        <option value="Engativá">Engativá</option>
+        <option value="Suba">Suba</option>
+        <option value="Barrios Unidos">Barrios Unidos</option>
+        <option value="Teusaquillo">Teusaquillo</option>
+        <option value="Los Mártires">Los Mártires</option>
+        <option value="Antonio Nariño">Antonio Nariño</option>
+        <option value="Puente Aranda">Puente Aranda</option>
+        <option value="La Candelaria">La Candelaria</option>
+        <option value="Rafael Uribe Uribe">Rafael Uribe Uribe</option>
+        <option value="Ciudad Bolívar">Ciudad Bolívar</option>
+        <option value="Sumapaz">Sumapaz</option>
+      </select>
+
+      <button onclick="mostrarInfo()">Filtrar</button>
+    </div>
+
+    <!-- Resultado del filtro -->
+    <div id="resultado" class="resultado">
+      <div class="columna">
+        <h2 id="tituloLocalidad"></h2>
+        <p id="infoLocalidad"></p>
+      </div>
+      <div class="columna">
+        <button onclick="continuarPrediccion()">Continuar con las Predicciones</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>© 2025 Misión TEMPO - Proyecto NASA Space Apps</footer>
+
+  <script>
+    function mostrarInfo() {
+      const localidad = document.getElementById("localidad").value;
+      const resultado = document.getElementById("resultado");
+      const titulo = document.getElementById("tituloLocalidad");
+      const info = document.getElementById("infoLocalidad");
+
+      if (localidad === "") {
+        alert("Por favor, selecciona una localidad antes de filtrar.");
+        return;
+      }
+
+      // Muestra la información de ejemplo
+      titulo.textContent = localidad;
+      info.textContent = `Análisis atmosférico en ${localidad}: 
+      Los sensores satelitales detectan niveles estables de ozono y partículas PM2.5 dentro de los parámetros normales. 
+      Se recomienda mantener monitoreo activo durante las próximas 24 horas.`;
+
+      resultado.classList.add("visible");
+    }
+
+    function continuarPrediccion() {
+      // Redirige a la página de predicciones
+      window.location.href = "predicciones.html";
+    }
+     <!-- Pie de página -->
+  <footer>© 2025 Misión TEMPO - Proyecto NASA Space Apps</footer>
+  </script>
+</body>
+ 
+</html>
