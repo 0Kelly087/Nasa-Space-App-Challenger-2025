@@ -9,6 +9,31 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Texto blanco con brillo */
+h1 .blanco {
+  color: #ffffff !important;
+  text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.9),
+    0 0 20px rgba(255, 255, 255, 0.8),
+    0 0 30px rgba(255, 255, 255, 0.7);
+}
+
+/* Texto azul con brillo */
+h1 .azul {
+  color: #00c3ff !important;
+  text-shadow: 
+    0 0 10px rgba(0, 195, 255, 1),
+    0 0 25px rgba(0, 195, 255, 0.8),
+    0 0 40px rgba(0, 195, 255, 0.6);
+}
+
 /* Body específico para página de filtros */
 body.filtros-page {
   background: url("../images/LogoFondoPrincipal.png") no-repeat center center fixed;
