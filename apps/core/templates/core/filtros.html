@@ -124,6 +124,11 @@
   <footer>© 2025 Misión TEMPO - Proyecto NASA Space Apps</footer>
 
   <script>
+     document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+      document.body.classList.add("loaded");
+    }, 400);
+    });
     function continuarPrediccion() {
       // Usar Django template tag para generar la URL correcta
       window.location.href = "{% url 'predicciones' %}";
