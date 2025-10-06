@@ -87,7 +87,7 @@ body.filtros-page footer {
 }
 body.filtros-page #map {
   flex: 2;
-  height: 65vh;
+  height: 50vh;
   min-height: 400px;
   max-height: 900px;
   border-radius: 10px;
