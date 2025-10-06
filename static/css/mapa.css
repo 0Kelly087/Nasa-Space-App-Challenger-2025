@@ -1,18 +1,9 @@
 /* =============================
    ESTILOS ESPECÍFICOS PARA PÁGINA DE FILTROS CON MAPA
-   Archivo: filtros.css
+   Agregar al final de style.css o crear filtros.css
 ============================= */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* =============================
-   BODY
-============================= */
+/* Body específico para página de filtros */
 body.filtros-page {
   background: url("../images/LogoFondoPrincipal.png") no-repeat center center fixed;
   background-size: cover;
@@ -20,11 +11,13 @@ body.filtros-page {
   display: flex;
   flex-direction: column;
   color: white;
-  overflow: hidden; /* Evita scroll innecesario */
+  overflow-x: hidden;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
-/* Fondo fijo */
+/* Pseudo-elemento para fondo fijo */
 body.filtros-page::before {
   content: '';
   position: fixed;
@@ -36,7 +29,7 @@ body.filtros-page::before {
   z-index: -2;
 }
 
-/* Capa de oscurecimiento */
+/* Overlay oscuro */
 body.filtros-page .overlay {
   position: fixed;
   top: 0;
@@ -48,28 +41,19 @@ body.filtros-page .overlay {
   z-index: -1;
 }
 
-/* =============================
-   CONTENEDOR PRINCIPAL
-============================= */
+/* Contenedor principal de filtros */
 body.filtros-page .container.filtros-container {
   position: relative;
   z-index: 1;
   width: 90%;
   max-width: 1400px;
-  margin: 10px auto;
-  padding: 10px 20px;
+  margin: 20px auto;
+  padding: 20px;
   background: rgba(0, 0, 0, 0.7);
-  border-radius: 12px;
+  border-radius: 10px;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 40px); /* Se adapta al alto visible */
-  overflow: hidden;
 }
 
-/* =============================
-   TÍTULOS Y TEXTOS
-============================= */
 body.filtros-page h1 {
   text-align: center;
   margin-bottom: 10px;
@@ -79,22 +63,25 @@ body.filtros-page h1 {
 
 body.filtros-page .container > p {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: #ddd;
   font-weight: 300;
 }
 
-/* =============================
-   BARRA DE FILTROS
-============================= */
+/* Barra de filtros */
 body.filtros-page .barra-filtros {
   display: flex;
   gap: 10px;
+  margin-bottom: 20px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   background: transparent;
-  margin-bottom: 10px;
+  padding: 0;
+  box-shadow: none;
+  width: 100%;
+  max-width: none;
+  margin-top: 0;
 }
 
 body.filtros-page .barra-filtros select {
@@ -102,11 +89,14 @@ body.filtros-page .barra-filtros select {
   font-size: 16px;
   border-radius: 25px;
   border: none;
-  min-width: 220px;
+  min-width: 250px;
+  width: auto;
   background: white;
   color: #333;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-bottom: 0;
+  text-align: left;
 }
 
 body.filtros-page .barra-filtros select:hover {
@@ -119,12 +109,12 @@ body.filtros-page .barra-filtros button {
   background: linear-gradient(90deg, #007bff, #00c3ff);
   color: white;
   cursor: pointer;
+  transition: all 0.3s;
   border: none;
   border-radius: 25px;
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-  transition: all 0.3s ease;
 }
 
 body.filtros-page .barra-filtros button:hover {
@@ -133,28 +123,25 @@ body.filtros-page .barra-filtros button:hover {
   transform: translateY(-2px);
 }
 
-/* =============================
-   CONTENIDO PRINCIPAL (MAPA + RESULTADOS)
-============================= */
+/* Contenedor del mapa y resultados */
 body.filtros-page .contenido-principal {
-  flex: 1;
   display: flex;
   gap: 20px;
-  height: 100%;
-  align-items: stretch;
+  margin-top: 20px;
+  min-height: 500px;
 }
 
-/* ===== MAPA ===== */
+/* Mapa */
 body.filtros-page #map {
   flex: 2;
-  height: 100%;
+  height: 500px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   border: 2px solid rgba(0, 195, 255, 0.3);
 }
 
-/* ===== PANEL DE RESULTADOS ===== */
+/* Panel de resultados */
 body.filtros-page .resultado {
   flex: 1;
   background: rgba(0, 0, 0, 0.6);
@@ -163,7 +150,7 @@ body.filtros-page .resultado {
   backdrop-filter: blur(10px);
   display: none;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   box-shadow: 0 0 20px rgba(0, 195, 255, 0.4);
   border: 1px solid rgba(0, 195, 255, 0.3);
   animation: fadeDown 1s ease;
@@ -195,7 +182,7 @@ body.filtros-page .resultado button {
   border-radius: 25px;
   cursor: pointer;
   font-size: 16px;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
   margin-top: auto;
   font-weight: 600;
   text-transform: uppercase;
@@ -207,26 +194,23 @@ body.filtros-page .resultado button:hover {
   transform: translateY(-2px);
 }
 
-/* =============================
-   FOOTER
-============================= */
+/* Footer específico para filtros */
 body.filtros-page footer {
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  margin-top: 40px;
+  background: rgba(0, 0, 0, 0.8);
   width: 100%;
+  flex-shrink: 0;
   border-top: 1px solid rgba(0, 195, 255, 0.3);
   box-shadow: 0 -2px 10px rgba(0, 195, 255, 0.4);
   color: #00c3ff;
   font-size: 0.9em;
-  flex-shrink: 0;
 }
 
-/* =============================
-   ANIMACIÓN
-============================= */
+/* Animación fadeDown */
 @keyframes fadeDown {
   0% {
     opacity: 0;
@@ -238,37 +222,26 @@ body.filtros-page footer {
   }
 }
 
-/* =============================
-   RESPONSIVE DESIGN
-============================= */
-@media (max-width: 992px) {
+/* Responsive Design */
+@media (max-width: 768px) {
   body.filtros-page .contenido-principal {
     flex-direction: column;
   }
 
-  body.filtros-page .resultado {
-    width: 100%;
-    height: auto;
-  }
-
   body.filtros-page #map {
-    height: 50vh; /* En pantallas pequeñas, la mitad visible */
-  }
-}
-
-@media (max-width: 768px) {
-  body.filtros-page h1 {
-    font-size: 1.5rem;
+    height: 400px;
   }
 
   body.filtros-page .barra-filtros {
     flex-direction: column;
-    gap: 8px;
   }
 
-  body.filtros-page .barra-filtros select,
-  body.filtros-page .barra-filtros button {
+  body.filtros-page .barra-filtros select {
     width: 100%;
+  }
+
+  body.filtros-page h1 {
+    font-size: 1.5rem;
   }
 
   body.filtros-page .container > p {
