@@ -1,89 +1,11 @@
 /* =============================
    ESTILOS ESPECÍFICOS PARA PÁGINA DE FILTROS CON MAPA 
-   Agregar al final de style.css o crear filtros.css
 ============================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-}
-/* =============================
-   ANIMACIONES DE ENTRADA SUAVE
-============================= */
-
-/* Animación general para caída suave */
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Animación de aparición desde abajo */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Animación de aparición gradual */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* ==========================================
-   EFECTOS DE ENTRADA SECUENCIAL AL CARGAR
-========================================== */
-
-/* Contenedor principal se vuelve visible */
-body.filtros-page.loaded .container.filtros-container {
-  animation: fadeIn 1s ease forwards;
-}
-
-/* Título principal */
-body.filtros-page.loaded h1 {
-  opacity: 0;
-  animation: fadeInDown 1s ease forwards;
-  animation-delay: 0.3s;
-}
-
-/* Párrafo introductorio */
-body.filtros-page.loaded .container > p {
-  opacity: 0;
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 0.6s;
-}
-
-/* Barra de filtros */
-body.filtros-page.loaded .barra-filtros {
-  opacity: 0;
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 0.9s;
-}
-
-/* Contenido principal (mapa + resultados) */
-body.filtros-page.loaded .contenido-principal {
-  opacity: 0;
-  animation: fadeInUp 1.2s ease forwards;
-  animation-delay: 1.2s;
-}
-
-/* Footer */
-body.filtros-page.loaded footer {
-  opacity: 0;
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 1.5s;
 }
 
 h1 {
@@ -111,7 +33,9 @@ h1 .azul {
     0 0 40px rgba(0, 195, 255, 0.6);
 }
 
-/* Body específico para página de filtros */
+/* =============================
+   FONDO Y ESTRUCTURA GENERAL
+============================= */
 body.filtros-page {
   background: url("../images/LogoFondoPrincipal.png") no-repeat center center fixed;
   background-size: cover;
@@ -125,7 +49,7 @@ body.filtros-page {
   padding: 0;
 }
 
-/* Pseudo-elemento para fondo fijo */
+/* Fondo fijo */
 body.filtros-page::before {
   content: '';
   position: fixed;
@@ -149,7 +73,7 @@ body.filtros-page .overlay {
   z-index: -1;
 }
 
-/* Contenedor principal de filtros */
+/* Contenedor principal */
 body.filtros-page .container.filtros-container {
   position: relative;
   z-index: 1;
@@ -176,7 +100,9 @@ body.filtros-page .container > p {
   font-weight: 300;
 }
 
-/* Barra de filtros */
+/* =============================
+   BARRA DE FILTROS
+============================= */
 body.filtros-page .barra-filtros {
   display: flex;
   gap: 10px;
@@ -231,7 +157,9 @@ body.filtros-page .barra-filtros button:hover {
   transform: translateY(-2px);
 }
 
-/* Contenedor del mapa y resultados */
+/* =============================
+   MAPA Y RESULTADOS
+============================= */
 body.filtros-page .contenido-principal {
   display: flex;
   gap: 20px;
@@ -239,7 +167,6 @@ body.filtros-page .contenido-principal {
   min-height: 500px;
 }
 
-/* Mapa */
 body.filtros-page #map {
   flex: 2;
   height: 500px;
@@ -249,7 +176,6 @@ body.filtros-page #map {
   border: 2px solid rgba(0, 195, 255, 0.3);
 }
 
-/* Panel de resultados */
 body.filtros-page .resultado {
   flex: 1;
   background: rgba(0, 0, 0, 0.6);
@@ -302,7 +228,9 @@ body.filtros-page .resultado button:hover {
   transform: translateY(-2px);
 }
 
-/* Footer específico para filtros */
+/* =============================
+   FOOTER
+============================= */
 body.filtros-page footer {
   position: relative;
   z-index: 1;
@@ -318,13 +246,73 @@ body.filtros-page footer {
   font-size: 0.9em;
 }
 
-/* Animación fadeDown */
+/* =============================
+   ANIMACIONES BASE
+============================= */
 @keyframes fadeDown {
   0% { opacity: 0; transform: translateY(-40px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive Design */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* =============================
+   EFECTO DE ENTRADA SECUENCIAL
+============================= */
+
+/* Ocultar todo inicialmente */
+body.filtros-page .container.filtros-container,
+body.filtros-page h1,
+body.filtros-page .container > p,
+body.filtros-page .barra-filtros,
+body.filtros-page .contenido-principal,
+body.filtros-page footer {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Animaciones progresivas al cargar */
+body.filtros-page.loaded h1 {
+  animation: fadeInDown 0.8s ease forwards;
+  animation-delay: 0.1s;
+}
+
+body.filtros-page.loaded .container > p {
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+body.filtros-page.loaded .barra-filtros {
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.5s;
+}
+
+body.filtros-page.loaded .contenido-principal {
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.7s;
+}
+
+body.filtros-page.loaded footer {
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.9s;
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
 @media (max-width: 768px) {
   body.filtros-page .contenido-principal {
     flex-direction: column;
@@ -351,4 +339,3 @@ body.filtros-page footer {
     padding: 0 10px;
   }
 }
-

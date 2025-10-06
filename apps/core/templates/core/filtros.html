@@ -125,10 +125,8 @@
 
   <script>
      document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(() => {
-      document.body.classList.add("loaded");
-    }, 400);
-    });
+    document.body.classList.add("loaded");
+  });
     function continuarPrediccion() {
       // Usar Django template tag para generar la URL correcta
       window.location.href = "{% url 'predicciones' %}";
