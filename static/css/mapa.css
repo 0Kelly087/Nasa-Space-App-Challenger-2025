@@ -85,6 +85,17 @@ body.filtros-page footer {
   animation: fadeInUp 1s ease forwards;
   animation-delay: 1.5s;
 }
+body.filtros-page #map {
+  flex: 2;
+  height: 65vh;
+  min-height: 400px;
+  max-height: 900px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(0, 195, 255, 0.3);
+}
+
 
 
 h1 {
