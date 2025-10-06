@@ -82,39 +82,32 @@ footer {
   margin-bottom: 20px;
   animation: fadeDown 1.5s ease;
 }
-/* =============================
-   TÍTULO PRINCIPAL MODIFICADO
-============================= */
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  animation: fadeDown 2s ease;
+/* Título */
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1px;
+  animation: fadeInUp 2s ease forwards;
 }
 
-/* Parte blanca con brillo */
-h1 .blanco {
-  color: #ffffff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
-               0 0 20px rgba(255, 255, 255, 0.7);
+.white-galaxy {
+  color: #f0f0f0; /* blanco galáctico */
+  text-shadow: 0 0 5px #969595, 0 0 10px #d0d0ff;/* brillo */
 }
 
-/* Parte azul con brillo */
-h1 .azul {
-  color: #00aaff;
-  text-shadow: 0 0 10px rgba(0, 170, 255, 0.9),
-               0 0 25px rgba(0, 195, 255, 0.7);
+.blue-galaxy {
+  color: #00c6ff; /* azul galáctico */
+  text-shadow: 0 0 5px #0698c0, 0 0 10px #025cbd;/* brillo */
 }
 
-p {
-  max-width: 600px;
-  margin: 0 auto 30px;
-  font-weight: 300;
-  font-size: 1em;
-  line-height: 1.5;
-  animation: fadeDown 2.5s ease;
+/* Párrafo */
+.description {
+  max-width: 700px;
+  font-size: 1.1rem;
+  color: #d3d3d3;
+  margin-bottom: 40px;
+  animation: fadeIn 2s ease forwards;
 }
-
 
 /* =============================
    BOTÓN
