@@ -1,0 +1,404 @@
+/* ============================= */
+/* ESTILOS SALUD - MISIÓN TEMPO */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* EN TU style.css - REEMPLAZA EL BODY ACTUAL */
+.body {
+    background: url("../images/LogoFondoPrincipal.png") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow-x: auto;
+    position: relative;
+}
+
+/* Fondo idéntico a predicciones */
+.predicciones-page {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: #333;
+    position: relative;
+}
+
+.predicciones-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    z-index: -2;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+/* Contenedor principal - igual que predicciones */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Títulos con mismo estilo que predicciones */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.blanco {
+    color: white;
+}
+
+.azul {
+    color: #3498db;
+    font-weight: 700;
+}
+
+.localidad-seleccionada {
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.container>p {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Resumen de Calidad - estilo similar a comparacion-container */
+.resumen-calidad {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+/* Paneles - mismos estilos que predicciones */
+.panel {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.panel h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.panel h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 8px;
+}
+
+/* Dato Card - igual que predicciones */
+.dato-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border-left: 5px solid #3498db;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dato-label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+.dato-valor {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.dato-unidad {
+    font-size: 0.6em;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* Niveles de calidad - mismos estilos */
+.nivel-calidad {
+    display: inline-block;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nivel-calidad.bueno {
+    background: #4caf50;
+    color: white;
+}
+
+.nivel-calidad.moderado {
+    background: #ffc107;
+    color: #333;
+}
+
+.nivel-calidad.malo {
+    background: #ff9800;
+    color: white;
+}
+
+.nivel-calidad.muy-malo {
+    background: #ff5252;
+    color: white;
+}
+
+/* Contenedor de recomendaciones */
+.recomendaciones-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+/* Paneles de recomendación específicos */
+.recomendacion-panel {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.recomendacion-panel.futuro {
+    border-left: 5px solid #9b59b6;
+}
+
+.grupo-descripcion {
+    color: #7f8c8d;
+    font-style: italic;
+    margin: -10px 0 15px 0;
+    font-size: 0.9em;
+}
+
+/* Listas de recomendaciones */
+.recomendaciones-list {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.recomendacion-item {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    margin: 12px 0;
+    padding: 15px;
+    border-radius: 12px;
+    border-left: 4px solid #3498db;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.recomendacion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Panel de alertas */
+.alertas-panel {
+    background: rgba(255, 255, 255, 0.95);
+    margin-bottom: 30px;
+    border-left: 5px solid #e74c3c;
+}
+
+.alertas-list {
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.alerta-item {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 12px;
+    border-left: 4px solid #e74c3c;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #d63031;
+    font-weight: 500;
+}
+
+.alerta-item.positiva {
+    background: linear-gradient(135deg, #55efc4 0%, #00b894 100%);
+    border-left-color: #00b894;
+    color: #006442;
+}
+
+/* Información adicional */
+.info-adicional {
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 10px;
+    border-left: 4px solid #3498db;
+}
+
+.info-adicional p {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* Botones - mismos estilos que predicciones */
+.botones-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.btn-salud,
+.btn-volver {
+    display: inline-block;
+    padding: 15px 35px;
+    margin: 0 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-volver {
+    background: linear-gradient(135deg, #fd746c 0%, #ff9068 100%);
+    box-shadow: 0 10px 25px rgba(253, 116, 108, 0.4);
+}
+
+.btn-salud:hover,
+.btn-volver:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.6);
+}
+
+.btn-volver:hover {
+    box-shadow: 0 15px 35px rgba(253, 116, 108, 0.6);
+}
+
+/* Timestamp - mismo estilo */
+.timestamp {
+    text-align: center;
+    color: white;
+    font-size: 0.9em;
+    opacity: 0.8;
+    margin-top: 30px;
+    line-height: 1.6;
+}
+
+/* Footer - mismo estilo */
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    padding: 20px;
+    opacity: 0.8;
+}
+
+/* Scrollbar personalizado */
+.recomendaciones-list::-webkit-scrollbar,
+.alertas-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.recomendaciones-list::-webkit-scrollbar-track,
+.alertas-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.recomendaciones-list::-webkit-scrollbar-thumb,
+.alertas-list::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 10px;
+}
+
+.recomendaciones-list::-webkit-scrollbar-thumb:hover,
+.alertas-list::-webkit-scrollbar-thumb:hover {
+    background: #2980b9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .resumen-calidad,
+    .recomendaciones-container {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .botones-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-salud,
+    .btn-volver {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}

@@ -43,6 +43,20 @@ def predicciones(request):
     }
     return render(request, 'core/predicciones.html', context)
 
+def salud(request):
+    return render(request, 'core/salud.html')
+
+# En apps/core/views.py
+
+def predicciones(request):
+    # Obtener la localidad desde la sesión o parámetros GET
+    localidad = request.session.get('localidad_seleccionada')
+    
+    context = {
+        'localidad': localidad
+    }
+    return render(request, 'core/predicciones.html', context)
+
 def filtrar_localidad(request):
     localidad = request.GET.get('localidad')
     if not localidad:

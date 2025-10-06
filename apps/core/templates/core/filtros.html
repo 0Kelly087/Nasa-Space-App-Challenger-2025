@@ -24,7 +24,7 @@
     <h1>
       <span class="blanco">CENTRO DE FILTROS DE LA </span>
       <span class="azul"> MISIÓN TEMPO</span>
-  </h1>
+    </h1>
     <p>Selecciona una localidad de Bogotá para obtener información detallada.</p>
 
     <!-- Barra de Filtros -->
@@ -68,9 +68,10 @@
           <h2 id="tituloLocalidad"></h2>
           <p id="infoLocalidad"></p>
         </div>
-        <p>Dale clic en continuar con las predicciones para conocer las condiciones actules del aire y sus
+        <p>Dale clic en continuar con las predicciones para conocer las condiciones actuales del aire y sus
           predicciones.</p>
-        <a href="{% url 'predicciones' %}" class="btn-prediccion">Continuar con las Predicciones</a>
+        <button type="button" onclick="continuarPrediccion()" class="btn-prediccion">Continuar con las
+          Predicciones</button>
       </div>
     </div>
   </div>
@@ -124,6 +125,7 @@
   </style>
   <footer>© 2025 Misión TEMPO - Proyecto NASA Space Apps</footer>
 
+  <!-- Scripts -->
   <script>
      document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
@@ -131,8 +133,32 @@
     }, 400);
     });
     function continuarPrediccion() {
-      // Usar Django template tag para generar la URL correcta
-      window.location.href = "{% url 'predicciones' %}";
+      console.log('=== EJECUTANDO continuarPrediccion ===');
+
+      // Obtener la localidad seleccionada
+      const select = document.getElementById("localidad");
+      const localidad = select ? select.value : '';
+
+      console.log('Localidad seleccionada:', localidad);
+
+      if (localidad && localidad !== "") {
+        // Guardar en localStorage
+        localStorage.setItem('localidadSeleccionada', localidad);
+        console.log('✅ Localidad guardada en localStorage:', localidad);
+
+        // Verificar que se guardó
+        const verificacion = localStorage.getItem('localidadSeleccionada');
+        console.log('✅ Verificación localStorage:', verificacion);
+
+        // Redirigir después de guardar
+        setTimeout(() => {
+          console.log('🔀 Redirigiendo a predicciones...');
+          window.location.href = "{% url 'predicciones' %}";
+        }, 100);
+      } else {
+        console.log('❌ No hay localidad seleccionada');
+        alert('Por favor, selecciona una localidad antes de continuar.');
+      }
     }
   </script>
 

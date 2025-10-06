@@ -1,33 +1,125 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Predicciones - Misión TEMPO</title>
 
-  <!-- Fuente y CSS principal -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="{% static 'css/predicciones.css' %}">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predicciones - Misión TEMPO</title>
+
+    <!-- Fuente y CSS principal -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/predicciones.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/predicciones_comparacion.css' %}">
 </head>
 
 <body>
-  <div class="container">
-    <h1>Predicciones de Calidad del Aire</h1>
-    <p>Aquí se mostrarán las predicciones basadas en los datos de la misión TEMPO.</p>
+    <div class="container">
+        <h1>Predicciones de Calidad del Aire</h1>
+        <p class="localidad-seleccionada" id="localidadNombre">Cargando localidad...</p>
+        <p>Análisis detallado de las condiciones actuales del aire y proyecciones a 15 años basadas en modelos
+            climáticos y datos de la misión TEMPO.</p>
 
-    <div class="predicciones-container">
-      <h2>Datos de Predicción</h2>
-      <p>Contenido de predicciones aquí...</p>
+        <div class="comparacion-container">
+            <!-- Panel de Datos Actuales -->
+            <div class="panel actual">
+                <h2>📊 Condiciones Actuales</h2>
+
+                <div class="dato-card">
+                    <div class="dato-label">NO₂ (Dióxido de Nitrógeno)</div>
+                    <div class="dato-valor" style="color: #ff9800;">
+                        42.5 <span class="dato-unidad">ppb</span>
+                    </div>
+                    <span class="nivel-calidad moderado">Moderado</span>
+                </div>
+
+                <div class="dato-card">
+                    <div class="dato-label">O₃ (Ozono Troposférico)</div>
+                    <div class="dato-valor" style="color: #4caf50;">
+                        35.2 <span class="dato-unidad">ppb</span>
+                    </div>
+                    <span class="nivel-calidad bueno">Bueno</span>
+                </div>
+
+                <div class="dato-card">
+                    <div class="dato-label">SO₂ (Dióxido de Azufre)</div>
+                    <div class="dato-valor" style="color: #4caf50;">
+                        8.1 <span class="dato-unidad">ppb</span>
+                    </div>
+                    <span class="nivel-calidad bueno">Bueno</span>
+                </div>
+
+                <div class="dato-card">
+                    <div class="dato-label">Índice de Calidad del Aire</div>
+                    <div class="dato-valor" style="color: #ffc107;">
+                        68 <span class="dato-unidad">AQI</span>
+                    </div>
+                    <span class="nivel-calidad moderado">Moderado</span>
+                </div>
+            </div>
+
+            <!-- Panel de Predicciones -->
+            <div class="panel prediccion">
+                <h2>🔮 Proyección (Año 2040)</h2>
+
+                <div class="dato-card">
+                    <div class="dato-label">NO₂ (Dióxido de Nitrógeno)</div>
+                    <div class="dato-valor" style="color: #ff5252;">
+                        58.9 <span class="dato-unidad">ppb</span>
+                        <span class="indicador-cambio empeora">↑ +39%</span>
+                    </div>
+                    <span class="nivel-calidad malo">Malo</span>
+                </div>
+
+                <div class="dato-card">
+                    <div class="dato-label">O₃ (Ozono Troposférico)</div>
+                    <div class="dato-valor" style="color: #ff9800;">
+                        67.3 <span class="dato-unidad">ppb</span>
+                        <span class="indicador-cambio empeora">↑ +91%</span>
+                    </div>
+                    <span class="nivel-calidad malo">Malo</span>
+                </div>
+
+                <div class="dato-card">
+                    <div class="dato-label">SO₂ (Dióxido de Azufre)</div>
+                    <div class="dato-valor" style="color: #ffc107;">
+                        12.4 <span class="dato-unidad">ppb</span>
+                        <span class="indicador-cambio empeora">↑ +53%</span>
+                    </div>
+                    <span class="nivel-calidad moderado">Moderado</span>
+                </div>
+
+                <div class="dato-card">
+                    <div class="dato-label">Índice de Calidad del Aire</div>
+                    <div class="dato-valor" style="color: #ff9800;">
+                        142 <span class="dato-unidad">AQI</span>
+                        <span class="indicador-cambio empeora">↑ +109%</span>
+                    </div>
+                    <span class="nivel-calidad malo">Malo para grupos sensibles</span>
+                </div>
+            </div>
+        </div>
+
+        <p class="timestamp">
+            Última actualización: 5 de octubre de 2025, 14:30 UTC<br>
+            Proyecciones climáticas basadas en modelos CMIP6 y datos de la Misión TEMPO de NASA<br>
+            <small>* Las proyecciones asumen un escenario SSP2-4.5 (emisiones moderadas)</small>
+        </p>
+
+        <div class="botones-container">
+            <a href="{% url 'salud' %}" class="btn-salud">
+                Ver Recomendaciones de Salud
+            </a>
+            <a href="{% url 'filtros' %}" class="btn-volver">
+                Volver a Filtros
+            </a>
+        </div>
     </div>
 
-    <a href="{% url 'filtros' %}" class="btn-volver">Volver a Filtros</a>
-  </div>
+    <footer>© 2025 Misión TEMPO - Proyecto NASA Space Apps</footer>
 
-  <footer>© 2025 Misión TEMPO - Proyecto NASA Space Apps</footer>
-
-  <style>
-   
-  </style>
+    <!-- Scripts al final del body para asegurar carga correcta -->
+    <script src="{% static 'js/predicciones.js' %}"></script>
 </body>
+
 </html>

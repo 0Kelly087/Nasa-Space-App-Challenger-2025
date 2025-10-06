@@ -6,5 +6,7 @@ urlpatterns = [
     path('filtros/', views.filtros, name='filtros'),
     path('predicciones/', views.predicciones, name='predicciones'),
     path('filtrar-localidad/', views.filtrar_localidad, name='filtrar_localidad'),  # ← AGREGAR ESTA LÍNEA
+    path('salud/', views.salud, name='salud'),  # ← Añade esta línea
+
 ]
 
