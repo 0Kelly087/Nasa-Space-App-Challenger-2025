@@ -1,8 +1,18 @@
 # *Tecknocrafters-Nasa-Space-App-Challenger-2025*
 
-<!-- <p align="center">
-  <video src="Assets/Ilustration-challenge.png" width=400">
-<p/> -->
+<p align="rigth">
+  <video src="https://github.com/user-attachments/assets/aa9fb98a-9e0a-4ea3-8c59-80d6f42477ad" width=400">
+<p/>
+
+## *Link TEemsat Website Teknocrafters Proyect*
+    ddf
+
+## *Demo TEemsat Website Teknocrafters Proyect*
+    https://www.youtube.com/watch?v=RjIbYJguMS0
+
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/18251cb2-07d7-47b0-beba-debde0f0f32d" width="400" height="350"/>
+<p/>
 
 # *Acerca del desafío:*
 **From EarthData to Action: Cloud Computing with Earth Observation Data for Predicting Cleaner, Safer Skies**\
@@ -53,24 +63,76 @@ El sistema combina datos satelitales y terrestres con herramientas de visualizac
 
 ## *Estructura Del Proyecto*
 ```Tecknocrafters-Nasa-Space-App-Challenger-2025/
-└── node_modules/                # Modulos node.js
-└── src/                         # Rutas del proyecto
-|   ├─── models/                 
-|   │   ├── fossil.js            # Modelo de fósil
-|   │   ├── museum.js            # Modelo de museo
-|   │   └── user.js              # Modelo de usuario
-|   ├───routes/
-|   │   ├── authRoutes.js        # Rutas de autenticación
-|   │   ├── fossil.js            # Rutas de fósiles 
-|   │   └── museum.js            # Rutas de museos
-|   │   └── validate_token.js    # Rutas de autenticación
-├─── .env/                       # Variables de entorno
-├─── .gitignore/                 # Archivos y directorios ignorados
-├─── README.md/                  # README repositorio GitHub
-├───index.html                   # Index HTML del proyecto
-├─── index.js/                   # Index del proyecto
-├─── package-lock.json/          # Dependencias del proyecto
-└─── package.json/               # Dependencias del proyecto
+C:\USERS\USUARIO\NASA-SPACE-APP-CHALLENGER-2025\APPS
+│   __init__.py
+│
+├───api
+│   │   admin.py
+│   │   apps.py
+│   │   models.py
+│   │   tests.py
+│   │   urls.py
+│   │   views.py
+│   │   __init__.py
+│   │
+│   ├───migrations
+│   │   │   __init__.py
+│   │   │
+│   │   └───__pycache__
+│   │           __init__.cpython-312.pyc
+│   │
+│   └───__pycache__
+│           admin.cpython-312.pyc
+│           apps.cpython-312.pyc
+│           models.cpython-312.pyc
+│           urls.cpython-312.pyc
+│           views.cpython-312.pyc
+│           __init__.cpython-312.pyc
+│
+├───core
+│   │   admin.py
+│   │   app.py
+│   │   models.py
+│   │   test.py
+│   │   urls.py
+│   │   views.py
+│   │   __init__.py
+│   │
+│   ├───templates
+│   │   └───core
+│   │           filtros.html
+│   │           index.html
+│   │           predicciones.html
+│   │
+│   └───__pycache__
+│           admin.cpython-312.pyc
+│           models.cpython-312.pyc
+│           urls.cpython-312.pyc
+│           views.cpython-312.pyc
+│           __init__.cpython-312.pyc
+│
+├───ia_models
+│   │   admin.py
+│   │   apps.py
+│   │   models.py
+│   │   tests.py
+│   │   views.py
+│   │   __init__.py
+│   │
+│   ├───migrations
+│   │   │   __init__.py
+│   │   │
+│   │   └───__pycache__
+│   │           __init__.cpython-312.pyc
+│   │
+│   └───__pycache__
+│           admin.cpython-312.pyc
+│           apps.cpython-312.pyc
+│           models.cpython-312.pyc
+│           __init__.cpython-312.pyc
+│
+└───__pycache__
+        __init__.cpython-312.pyc
 ```
 
 
