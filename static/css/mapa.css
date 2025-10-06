@@ -1,7 +1,13 @@
 /* =============================
-   ESTILOS ESPECÍFICOS PARA PÁGINA DE FILTROS CON MAPA
+   ESTILOS ESPECÍFICOS PARA PÁGINA DE FILTROS CON MAPA 
    Agregar al final de style.css o crear filtros.css
 ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
 
 /* Body específico para página de filtros */
 body.filtros-page {
@@ -212,14 +218,8 @@ body.filtros-page footer {
 
 /* Animación fadeDown */
 @keyframes fadeDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(-40px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive Design */
