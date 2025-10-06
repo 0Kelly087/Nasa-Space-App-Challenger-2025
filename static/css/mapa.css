@@ -1,5 +1,6 @@
 /* =============================
    ESTILOS ESPECÍFICOS PARA PÁGINA DE FILTROS CON MAPA 
+   Agregar al final de style.css o crear filtros.css
 ============================= */
 * {
   margin: 0;
@@ -7,6 +8,7 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
+
 
 h1 {
   font-size: 2.5em;
@@ -33,9 +35,7 @@ h1 .azul {
     0 0 40px rgba(0, 195, 255, 0.6);
 }
 
-/* =============================
-   FONDO Y ESTRUCTURA GENERAL
-============================= */
+/* Body específico para página de filtros */
 body.filtros-page {
   background: url("../images/LogoFondoPrincipal.png") no-repeat center center fixed;
   background-size: cover;
@@ -49,7 +49,7 @@ body.filtros-page {
   padding: 0;
 }
 
-/* Fondo fijo */
+/* Pseudo-elemento para fondo fijo */
 body.filtros-page::before {
   content: '';
   position: fixed;
@@ -73,7 +73,7 @@ body.filtros-page .overlay {
   z-index: -1;
 }
 
-/* Contenedor principal */
+/* Contenedor principal de filtros */
 body.filtros-page .container.filtros-container {
   position: relative;
   z-index: 1;
@@ -100,9 +100,7 @@ body.filtros-page .container > p {
   font-weight: 300;
 }
 
-/* =============================
-   BARRA DE FILTROS
-============================= */
+/* Barra de filtros */
 body.filtros-page .barra-filtros {
   display: flex;
   gap: 10px;
@@ -157,9 +155,7 @@ body.filtros-page .barra-filtros button:hover {
   transform: translateY(-2px);
 }
 
-/* =============================
-   MAPA Y RESULTADOS
-============================= */
+/* Contenedor del mapa y resultados */
 body.filtros-page .contenido-principal {
   display: flex;
   gap: 20px;
@@ -167,6 +163,7 @@ body.filtros-page .contenido-principal {
   min-height: 500px;
 }
 
+/* Mapa */
 body.filtros-page #map {
   flex: 2;
   height: 500px;
@@ -176,6 +173,7 @@ body.filtros-page #map {
   border: 2px solid rgba(0, 195, 255, 0.3);
 }
 
+/* Panel de resultados */
 body.filtros-page .resultado {
   flex: 1;
   background: rgba(0, 0, 0, 0.6);
@@ -228,9 +226,7 @@ body.filtros-page .resultado button:hover {
   transform: translateY(-2px);
 }
 
-/* =============================
-   FOOTER
-============================= */
+/* Footer específico para filtros */
 body.filtros-page footer {
   position: relative;
   z-index: 1;
@@ -246,73 +242,13 @@ body.filtros-page footer {
   font-size: 0.9em;
 }
 
-/* =============================
-   ANIMACIONES BASE
-============================= */
+/* Animación fadeDown */
 @keyframes fadeDown {
   0% { opacity: 0; transform: translateY(-40px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fadeInDown {
-  0% { opacity: 0; transform: translateY(-30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* =============================
-   EFECTO DE ENTRADA SECUENCIAL
-============================= */
-
-/* Ocultar todo inicialmente */
-body.filtros-page .container.filtros-container,
-body.filtros-page h1,
-body.filtros-page .container > p,
-body.filtros-page .barra-filtros,
-body.filtros-page .contenido-principal,
-body.filtros-page footer {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-/* Animaciones progresivas al cargar */
-body.filtros-page.loaded h1 {
-  animation: fadeInDown 0.8s ease forwards;
-  animation-delay: 0.1s;
-}
-
-body.filtros-page.loaded .container > p {
-  animation: fadeInUp 0.8s ease forwards;
-  animation-delay: 0.3s;
-}
-
-body.filtros-page.loaded .barra-filtros {
-  animation: fadeInUp 0.8s ease forwards;
-  animation-delay: 0.5s;
-}
-
-body.filtros-page.loaded .contenido-principal {
-  animation: fadeInUp 0.8s ease forwards;
-  animation-delay: 0.7s;
-}
-
-body.filtros-page.loaded footer {
-  animation: fadeInUp 0.8s ease forwards;
-  animation-delay: 0.9s;
-}
-
-/* =============================
-   RESPONSIVE DESIGN
-============================= */
+/* Responsive Design */
 @media (max-width: 768px) {
   body.filtros-page .contenido-principal {
     flex-direction: column;
@@ -339,3 +275,4 @@ body.filtros-page.loaded footer {
     padding: 0 10px;
   }
 }
+
