@@ -82,22 +82,29 @@ footer {
   margin-bottom: 20px;
   animation: fadeDown 1.5s ease;
 }
-/* Título */
-.title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1px;
-  animation: fadeInUp 2s ease forwards;
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
-.white-galaxy {
-  color: #f0f0f0; /* blanco galáctico */
-  text-shadow: 0 0 5px #969595, 0 0 10px #d0d0ff;/* brillo */
+/* Texto blanco con brillo */
+h1 .blanco {
+  color: #ffffff !important;
+  text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.9),
+    0 0 20px rgba(255, 255, 255, 0.8),
+    0 0 30px rgba(255, 255, 255, 0.7);
 }
 
-.blue-galaxy {
-  color: #00c6ff; /* azul galáctico */
-  text-shadow: 0 0 5px #0698c0, 0 0 10px #025cbd;/* brillo */
+/* Texto azul con brillo */
+h1 .azul {
+  color: #00c3ff !important;
+  text-shadow: 
+    0 0 10px rgba(0, 195, 255, 1),
+    0 0 25px rgba(0, 195, 255, 0.8),
+    0 0 40px rgba(0, 195, 255, 0.6);
 }
 
 /* Párrafo */
