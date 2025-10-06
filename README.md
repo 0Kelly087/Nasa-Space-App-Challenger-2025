@@ -4,9 +4,6 @@
   <video src="https://github.com/user-attachments/assets/aa9fb98a-9e0a-4ea3-8c59-80d6f42477ad" width=400">
 <p/>
 
-## *Link TEemsat Website Teknocrafters Proyect*
-    ddf
-
 ## *Demo TEemsat Website Teknocrafters Proyect*
     https://www.youtube.com/watch?v=RjIbYJguMS0
 
