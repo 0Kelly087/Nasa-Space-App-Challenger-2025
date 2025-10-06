@@ -18,18 +18,18 @@ h1 {
 
 /* Texto blanco con brillo */
 h1 .blanco {
-  color: #ffffff !important;
+  color: #ffffffb6 !important;
   text-shadow: 
-    0 0 10px rgba(255, 255, 255, 0.9),
-    0 0 20px rgba(255, 255, 255, 0.8),
+    0 0 10px rgba(255, 255, 255, 0.397),
+    0 0 20px rgba(255, 255, 255, 0.422),
     0 0 30px rgba(255, 255, 255, 0.7);
 }
 
 /* Texto azul con brillo */
 h1 .azul {
-  color: #00c3ff !important;
+  color: #04bdf5 !important;
   text-shadow: 
-    0 0 10px rgba(0, 195, 255, 1),
+    0 0 10px rgb(2, 74, 96),
     0 0 25px rgba(0, 195, 255, 0.8),
     0 0 40px rgba(0, 195, 255, 0.6);
 }
