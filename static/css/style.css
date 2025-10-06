@@ -21,17 +21,22 @@
   position: relative;
 }
 
+/* =============================
+   PIE DE PÁGINA (FIXED SOBRE OVERLAY)
+============================= */
 footer {
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
   text-align: center;
   padding: 15px 0;
   background: rgba(0, 0, 0, 0.7);
   color: #00c3ff;
   font-size: 0.9em;
-  margin-top: 60px;
   box-shadow: 0 -2px 10px rgba(0, 195, 255, 0.4);
   border-top: 1px solid rgba(0, 195, 255, 0.3);
+  z-index: 10; /* 👈 Para que quede sobre el fondo transparente */
   animation: fadeDown 1.5s ease;
 }
 
@@ -77,11 +82,28 @@ footer {
   margin-bottom: 20px;
   animation: fadeDown 1.5s ease;
 }
-
+/* =============================
+   TÍTULO PRINCIPAL MODIFICADO
+============================= */
 h1 {
-  font-size: 1.8em;
+  font-size: 2.5em;
   margin-bottom: 10px;
+  text-transform: uppercase;
   animation: fadeDown 2s ease;
+}
+
+/* Parte blanca con brillo */
+h1 .blanco {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
+               0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+/* Parte azul con brillo */
+h1 .azul {
+  color: #00aaff;
+  text-shadow: 0 0 10px rgba(0, 170, 255, 0.9),
+               0 0 25px rgba(0, 195, 255, 0.7);
 }
 
 p {
@@ -92,6 +114,7 @@ p {
   line-height: 1.5;
   animation: fadeDown 2.5s ease;
 }
+
 
 /* =============================
    BOTÓN
