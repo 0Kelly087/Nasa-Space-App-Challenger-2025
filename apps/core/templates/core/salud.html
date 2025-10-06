@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recomendaciones de Salud - Misión TEMPO</title>
+
+    <!-- Fuente y CSS principal -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/predicciones.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/salud.css' %}">
+</head>
+
+<body class="predicciones-page">
+    <div class="overlay"></div>
+
+    <div class="container">
+        <h1>
+            <span class="blanco">RECOMENDACIONES DE </span>
+            <span class="azul">SALUD</span>
+        </h1>
+        <p class="localidad-seleccionada" id="localidadNombre">Cargando localidad...</p>
+        <p>Recomendaciones personalizadas basadas en la calidad del aire de tu localidad y proyecciones futuras.</p>
+
+        <!-- Resumen de Calidad del Aire -->
+        <div class="resumen-calidad">
+            <div class="panel actual">
+                <h2>🩺 Estado Actual</h2>
+                <div class="dato-card">
+                    <div class="dato-label">Calidad del Aire Actual</div>
+                    <div class="dato-valor" id="valorAqiActual" style="color: #ffc107;">
+                        -- <span class="dato-unidad">AQI</span>
+                    </div>
+                    <span class="nivel-calidad" id="nivelAqiActual">Cargando...</span>
+                </div>
+                <div class="info-adicional">
+                    <p>Recomendaciones basadas en las condiciones actuales del aire</p>
+                </div>
+            </div>
+
+            <div class="panel prediccion">
+                <h2>🔮 Proyección 2040</h2>
+                <div class="dato-card">
+                    <div class="dato-label">Calidad del Aire Futura</div>
+                    <div class="dato-valor" id="valorAqiFuturo" style="color: #ff9800;">
+                        -- <span class="dato-unidad">AQI</span>
+                    </div>
+                    <span class="nivel-calidad" id="nivelAqiFuturo">Cargando...</span>
+                </div>
+                <div class="info-adicional">
+                    <p>Preparación para las condiciones proyectadas a 15 años</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recomendaciones por Grupo de Riesgo -->
+        <div class="recomendaciones-container">
+
+            <!-- Población General -->
+            <div class="panel recomendacion-panel">
+                <h3>👨‍👩‍👧‍👦 Población General</h3>
+                <div class="recomendaciones-list" id="recomendacionesGeneral">
+                    <div class="recomendacion-item">Cargando recomendaciones...</div>
+                </div>
+            </div>
+
+            <!-- Grupos Sensibles -->
+            <div class="panel recomendacion-panel">
+                <h3>👵 Grupos Sensibles</h3>
+                <p class="grupo-descripcion">Niños, adultos mayores, embarazadas</p>
+                <div class="recomendaciones-list" id="recomendacionesSensibles">
+                    <div class="recomendacion-item">Cargando recomendaciones...</div>
+                </div>
+            </div>
+
+            <!-- Personas con Enfermedades Respiratorias -->
+            <div class="panel recomendacion-panel">
+                <h3>😷 Enfermedades Respiratorias</h3>
+                <p class="grupo-descripcion">Asma, EPOC, bronquitis</p>
+                <div class="recomendaciones-list" id="recomendacionesRespiratorias">
+                    <div class="recomendacion-item">Cargando recomendaciones...</div>
+                </div>
+            </div>
+
+            <!-- Recomendaciones a Largo Plazo -->
+            <div class="panel recomendacion-panel futuro">
+                <h3>📈 Preparación para 2040</h3>
+                <div class="recomendaciones-list" id="recomendacionesLargoPlazo">
+                    <div class="recomendacion-item">Cargando recomendaciones futuras...</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Alertas Importantes -->
+        <div class="panel alertas-panel">
+            <h3>🚨 Alertas Importantes</h3>
+            <div class="alertas-list" id="alertasList">
+                <div class="alerta-item">Cargando alertas...</div>
+            </div>
+        </div>
+
+        <div class="botones-container">
+            <a href="{% url 'predicciones' %}" class="btn-salud">
+                Volver a Predicciones
+            </a>
+            <a href="{% url 'filtros' %}" class="btn-volver">
+                Volver a Filtros
+            </a>
+        </div>
+
+        <p class="timestamp">
+            Recomendaciones basadas en los estándares de calidad del aire de la OMS y proyecciones climáticas.<br>
+            <small>* Consulte con su médico para recomendaciones personalizadas</small>
+        </p>
+    </div>
+
+    <footer>© 2025 Misión TEMPO - Proyecto NASA Space Apps</footer>
+
+    <!-- Script para salud -->
+    <script src="{% static 'js/salud.js' %}"></script>
+</body>
+
+</html>

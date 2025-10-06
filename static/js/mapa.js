@@ -26,6 +26,12 @@ function mostrarInfo() {
     return;
   }
 
+  console.log('=== MOSTRAR INFO - Localidad:', localidad);
+
+  // Guardar la localidad seleccionada en localStorage
+  localStorage.setItem('localidadSeleccionada', localidad);
+  console.log('📍 Localidad guardada desde mostrarInfo:', localidad);
+
   console.log('Buscando localidad:', localidad);
 
   // Llamar al endpoint de Django
@@ -161,9 +167,3 @@ setTimeout(() => {
 window.addEventListener('resize', () => {
   map.invalidateSize();
 });
-
-function continuarPrediccion() {
-  window.location.href = "/predicciones/";  // Cambiar esto
-}
-
-   

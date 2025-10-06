@@ -1,0 +1,243 @@
+/* =============================
+   ESTILOS DE COMPARACIÓN
+============================= */
+.comparacion-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 40px 0;
+    animation: fadeIn 1.8s ease;
+}
+
+.panel {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 25px rgba(0, 195, 255, 0.4);
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(0, 195, 255, 0.6);
+}
+
+.panel h2 {
+    color: #00f5ff;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 243, 255, 0.3);
+    padding-bottom: 15px;
+    text-shadow: 0 0 10px rgba(0, 195, 255, 0.5);
+}
+
+.panel.prediccion h2 {
+    color: #00ff88;
+    border-bottom-color: rgba(0, 255, 136, 0.3);
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.dato-card {
+    background: rgba(255, 255, 255, 0.08);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 195, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.dato-card:hover {
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 20px rgba(0, 195, 255, 0.4);
+    transform: translateY(-3px);
+}
+
+.dato-label {
+    font-weight: 600;
+    color: #00c3ff;
+    font-size: 1em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px rgba(0, 195, 255, 0.3);
+}
+
+.dato-valor {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin: 10px 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.dato-unidad {
+    font-size: 0.5em;
+    color: #aaa;
+    margin-left: 5px;
+}
+
+/* =============================
+   NIVELES DE CALIDAD
+============================= */
+.nivel-calidad {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-top: 8px;
+    font-size: 0.9em;
+    text-shadow: none;
+}
+
+.bueno {
+    background: rgba(76, 175, 80, 0.8);
+    color: white;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.moderado {
+    background: rgba(255, 193, 7, 0.8);
+    color: #333;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+}
+
+.malo {
+    background: rgba(255, 152, 0, 0.8);
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+}
+
+.muy-malo {
+    background: rgba(244, 67, 54, 0.8);
+    color: white;
+    box-shadow: 0 0 10px rgba(244, 67, 54, 0.5);
+}
+
+/* =============================
+   INDICADORES DE CAMBIO
+============================= */
+.indicador-cambio {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 0.5em;
+    font-weight: bold;
+    text-shadow: 0 0 5px currentColor;
+}
+
+.mejora {
+    color: #4caf50;
+}
+
+.empeora {
+    color: #ff5252;
+}
+
+.estable {
+    color: #00c3ff;
+}
+
+/* =============================
+   ELEMENTOS ADICIONALES
+============================= */
+.localidad-seleccionada {
+    text-align: center;
+    color: #ffd700;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    animation: fadeDown 1.2s ease;
+}
+
+.timestamp {
+    text-align: center;
+    color: #00c3ff;
+    font-size: 0.9em;
+    margin-top: 30px;
+    opacity: 0.8;
+    animation: fadeDown 2s ease;
+}
+
+.timestamp small {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85em;
+    color: #ffd700;
+}
+
+.botones-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    animation: fadeDown 2.5s ease;
+}
+
+.btn-salud {
+    display: inline-block;
+    background: linear-gradient(90deg, #00ff88, #00c3a0);
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+    animation: fadeDown 2.5s ease;
+}
+
+.btn-salud:hover {
+    background: linear-gradient(90deg, #00c3a0, #00ff88);
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.6);
+    transform: scale(1.05);
+}
+
+.btn-salud:active {
+    animation: bounce 0.4s;
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+@media (max-width: 968px) {
+    .comparacion-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .panel {
+        padding: 20px;
+    }
+
+    .panel h2 {
+        font-size: 1.5em;
+    }
+
+    .dato-valor {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .localidad-seleccionada {
+        font-size: 1.2em;
+    }
+
+    .botones-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-salud,
+    .btn-volver {
+        width: 100%;
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+
+    .timestamp {
+        font-size: 0.8em;
+    }
+}
