@@ -132,7 +132,57 @@ C:\USERS\USUARIO\NASA-SPACE-APP-CHALLENGER-2025\APPS
         __init__.cpython-312.pyc
 ```
 
+---
 
+# Para reproducir la pagina web:
+
+### 1. Instalar Conda con `winget`
+ Ejecuta el siguiente comando para instalar Anaconda:
+   ```bash
+   winget install -e --id Anaconda.Anaconda3
+   ```
+
+### 2. Crear un Entorno Conda
+
+1. Abre una nueva terminal (puedes usar "Anaconda Prompt" o "cmd").
+2. Crea un entorno de Conda para tu proyecto Django. Reemplaza `mi_entorno` con el nombre que prefieras:
+   ```bash
+   conda create --name mi_entorno 
+   ```
+
+
+### 3. Activar el Entorno Conda
+
+1. Activa el entorno recién creado:
+   ```bash
+   conda activate mi_entorno
+   ```
+2. Verifica que el entorno esté activo. Deberías ver el nombre del entorno al inicio de la línea de comandos:
+   ```bash
+   (mi_entorno) C:\Users\tu_usuario>
+   ```
+
+
+### 4. Instalar las Dependencias del Proyecto
+
+1. Instala las dependencias del proyecto usando `pip`:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### 5. Desplegar el Proyecto en Localhost
+
+1. Asegúrate de que el entorno de Conda esté activo y de que estás en la carpeta raíz del proyecto.
+2. Ejecuta el servidor de desarrollo de Django:
+   ```bash
+   python manage.py runserver
+   ```
+3. Si todo está configurado correctamente, verás un mensaje similar a:
+   ```
+   Starting development server at http://127.0.0.1:8000/
+   ```
+4. Abre tu navegador y visita [http://127.0.0.1:8000/](http://127.0.0.1:8000/) para ver tu proyecto en acción.
+---
 ## **Team membersTeKnoCrafters:**
 
 Copyright: © https://github.com/0Kelly087 Created by: © 0Kelly087\
